@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>测试</title>
+	<script>
+
+		function yideng(n, o) {
+			console.log(o);
+			return {
+				yideng:function(m) {
+					return yideng(m,n)
+				}
+			}
+		}
+
+		const a=yideng(0);
+		a.yideng(1);
+		a.yideng(2);
+		a.yideng(3);
+
+		const b=yideng(0).yideng(1).yideng(2).yideng(3);
+
+		const c=yideng(0).yideng(1);
+		c.yideng(2);
+		c.yideng(3);
+
+	</script>
+</head>
+<body>
+</body>
+</html>
